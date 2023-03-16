@@ -4,13 +4,12 @@
 - In this project Convolutional Neural Network is trained and validated using 15K images. 
 
 ### Following steps are carried out, 
+* Labelling the worm manually making it Supervised learning.
+* Pre-processing the image
 
 This script uses a Convolutional Neural Network (CNN) for image classification and MATLAB's Deep Learning Toolbox. 
 
 Below is a brief summary of the script's functionality:
-
-* Labelling the worm manually making it Supervised learning.
-* Pre-processing the image
 
 * The script starts by preparing the workspace, clearing it of any existing variables and closing all open figures.
 *It then loads the image dataset using the imageDatastore function from the Deep Learning Toolbox. The images are organized into subfolders according to their respective categories.
