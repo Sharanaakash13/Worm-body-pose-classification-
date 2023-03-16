@@ -8,6 +8,17 @@
 * Pre-processing the image using the python script from the Image processing folder.
 * Once the images are pre-processed the Convolutional Neural Network (CNN) for image classification was implemented in MATLAB's Deep Learning Toolbox. 
 
+#### Below is a brief summary of the Python script's(image processing) functionality:
+* This script performs image processing on a set of PNG images located in a specified directory and its subdirectories. 
+* It imports the necessary libraries such as os, glob, cv2, and numpy for working with files, processing images, and handling arrays.
+
+* The input directory path is specified as input_path. 
+* The script uses the os module to join the input path with the filename pattern, i.e., "**/*.png", and creates a list of all PNG image file paths in the input directory and its subdirectories. This is done using glob.iglob() function.
+
+* The script then defines a function imagePreProcessing() that takes a file path of an image as input and processes the image using various image processing techniques. * The function reads the image using cv2.imread(), converts it to grayscale using cv2.cvtColor(), applies adaptive thresholding using cv2.adaptiveThreshold(), removes noise using connected component analysis with statistics using cv2.connectedComponentsWithStats(), removes smaller area components using a threshold value of 200 pixels, applies morphological operations using cv2.erode() function, and finally resizes the image to a fixed size of 80x80 pixels using cv2.resize() function. The processed image is returned by the function.
+
+* The main loop of the script iterates over all image file paths in the list, applies the imagePreProcessing() function to each image, overwrites the original image file with the processed image using cv2.imwrite() function, and displays the remaining number of images to be processed.
+
 #### Below is a brief summary of the MATLAB script's functionality:
 * The script starts by preparing the workspace, clearing it of any existing variables and closing all open figures.
 *It then loads the image dataset using the imageDatastore function from the Deep Learning Toolbox. The images are organized into subfolders according to their respective categories.
