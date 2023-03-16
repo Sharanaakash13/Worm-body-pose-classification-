@@ -8,7 +8,7 @@
 * Pre-processing the image using the python script from the Image processing folder.
 * Once the images are pre-processed the Convolutional Neural Network (CNN) for image classification was implemented in MATLAB's Deep Learning Toolbox. 
 
-### Below is a brief summary of the MATLAB script's functionality:
+#### Below is a brief summary of the MATLAB script's functionality:
 * The script starts by preparing the workspace, clearing it of any existing variables and closing all open figures.
 *It then loads the image dataset using the imageDatastore function from the Deep Learning Toolbox. The images are organized into subfolders according to their respective categories.
 * The dataset is shuffled using the shuffle function to randomize the order of the images.
